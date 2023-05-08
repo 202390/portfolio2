@@ -1,0 +1,1115 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal /* 기본 400 */
+}
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{color: inherit; text-decoration: none}
+
+/* header */
+header{
+    height:115px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.hWrap{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+h1{
+    padding-top: 25px;
+}
+
+.util{
+    font-size: 12pt;
+    font-weight: bold;
+    font-family:'Pretendard-Regular';
+
+    color: #7b7b7b;
+    display: flex;
+    position: absolute;
+    top:50px;
+    right:155px;
+}
+.util li::after{
+    content: '|';
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.util li:nth-last-child(4):after,
+.util li:nth-last-child(3):after,
+.util li:nth-last-child(2):after,{
+    content: none;
+}
+.util li:last-child::after{
+    content: none;
+}
+
+.Uticon1{
+    background-image: url(../img/Uticon1.png);
+    background-size: 18px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.Uticon2{
+    background-image: url(../img/Uticon2.png);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+
+}
+.Uticon3{
+    background-image: url(../img/Uticon3.png);
+    background-size: 14px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    height: 35px;
+}
+.Uticon4{
+    background-image: url(../img/Uticon4.png);
+    background-size: 23px;
+    background-repeat: no-repeat;
+    height: 30px;
+    padding-left: 30px;
+
+}
+/* 페이스북 그런 아이콘시작 */
+.uti2{
+    position: absolute;
+    top: 50px;
+    right:15px;
+    display: flex;
+}
+.uti2 li{
+    width:25px ;
+    height:25px ;
+    background-size: cover;
+    margin-left:10px;
+    margin-right:10px;
+}
+.Uticon5{
+    background-image: url(../img/Uticon5.png);
+    background-repeat: no-repeat;
+}
+.Uticon6{
+    background-image: url(../img/Uticon6.png);
+    background-repeat: no-repeat;
+}
+.Uticon7{
+    background-image: url(../img/Uticon7.png);
+    background-repeat: no-repeat;
+}
+
+/* gnb시작 */
+.gnb{
+    display: flex;
+    justify-items: center;
+    position: absolute;
+    top:90px;
+    left:420px;
+
+    font-family:'Pretendard-Regular';
+    font-size: 16px;
+    font-weight: bold;
+}
+        /*
+            .gnb li{
+                gnb내부의 모든 li선택
+                find()
+            }
+            .gnb>li{
+                gnb바로 아래의 li만 선택
+                children()
+            }
+        */
+.gnb>li{
+    width:130px;
+    text-align: center;
+
+}
+.gnb>li:hover{
+    color: #9f924b;
+}
+
+.sub{
+    /* 드롭다운 메뉴는
+    slideDown() 을 활용해서 만들기 때문에
+    슬라이드 될 대상은 초기값을 display:none으로 지정해두면 된다. */
+    display: none;
+    align-items: center;
+    /* 교차축에서 모든 항목의 정렬을 제어 */
+
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    top: 24px;
+
+    padding-top: 30px;
+    padding:0 0 30px 10px;
+    
+}
+.sub li{
+    margin-left:300px;
+    margin-top:20px;
+}
+.sub li:hover{
+    color:#51515c;
+}
+.sub h2{
+    font-family: 'Pretendard-Regular';
+    margin-left: 150px;
+    color:#333539;
+}
+/* mainBn */
+.mainBn{
+    display: hidden;
+    height:500px;
+    background-image: url(../img/web-Bn.jpg);
+    background-position: center center;
+    /* 백그라운드 사이즈 중앙정렬 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* 이미지 꽉차게 */
+}
+.mainBn a{
+    display: block;
+    height: 100%;
+}
+
+/* s1 */
+.s1{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+    position: relative;
+}
+
+.s1:before{
+    width: 1100px;
+    height: 130px;
+    content: '';
+    display: block;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    filter: blur(10px);
+}
+/* s1 차표 */
+.mainimg{
+    position: relative;
+    z-index: 10;
+    display:flex;
+    width: 1100px;
+    height: 130px;
+    background-image: url(../img/mainBn2.png);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-size: 100% auto;
+    /* 이거 최고다!!! */
+
+}
+.box{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    font-size: 16px;
+    padding-right:20px;
+    font-size:20px;
+}
+.box img{
+    height:90px;
+    display: block;
+    margin-top:20px;
+    margin-right:50px;
+
+}
+.box1{
+    flex: 1;
+    text-align: center;
+
+}
+
+.box1 img{
+    height: 30px;
+    display: block;
+    margin-bottom: 15px;
+
+}
+
+.box1 a{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  
+}
+/* maingBn2 아이콘 */
+p{
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* mainBn3 시작 */
+.mainBn3{
+    color: #fff;
+    padding-top:30px;
+    margin-bottom: 100px;
+}
+.wrap3{
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    justify-content: center;
+}
+.con{
+    box-shadow: -10px 5px 10px rgba(0,0,0,0.3);
+    /* 그림자
+    box-shwdow: x값 y값 blur값 색투명도값(rgba) */
+    width: 100px;
+    overflow: hidden;
+    height:700px;
+    transition: all 1s;
+}
+/* 안의 내용 */
+.con.active{
+    width: 830px;
+}
+
+
+
+.conWrap{
+    background-color: #51515c;
+    display: flex;
+    width: 830px;
+    height: 100%;
+}
+.con h3{
+    width: 100px;
+    writing-mode: vertical-lr;
+    padding-left: 10px;
+    box-sizing: border-box;
+    padding-top: 50px;
+    color: #fff;
+    font-family:'Pretendard-Regular';
+    font-size: 25px;
+    position: relative;
+    transition: padding 1s;
+    overflow: hidden;
+}
+
+.con h3:hover img{
+    left: -40px;
+}
+
+.con:hover h3{
+    padding-top: 40px;
+}
+
+.con h3 img{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    transition: all 1s;
+}
+
+.con.active h3 img{
+    transform: scale(1.1);
+}
+
+.con.active h3{
+    padding-top: 80px;
+    text-shadow: 2px 2px 0px gray;
+
+}
+
+.con.active h3:after{
+    background-color: transparent;
+    backdrop-filter: blur(0);
+}
+
+
+.con h3:hover:after{
+    backdrop-filter: blur(0);
+
+}
+
+.con h3 span{
+    position: relative;
+    z-index: 999;
+    display: block;
+
+}
+.con h3:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    top:0;
+    left: 0;
+    transition: all 1s;
+    backdrop-filter: blur(4px);
+
+}
+
+h4 span{
+    font-weight:normal;
+}
+h5{
+    font-size: 19px;
+    font-weight: bold;
+    padding: 0 0 5px 10px;
+}
+
+/* 오늘의 전시배경 */
+
+.Stitle.cover{
+    background-image: url(../img/img1-1.png);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    transition: background 1s;
+}
+.Stitle p{
+    font-family: 'Pretendard-Regular';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.Stitle.cover:after{
+    content: '';
+    display: block;
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    backdrop-filter: blur(5px);
+}
+.Stitle.cover h4{
+    position: relative;
+    z-index: 10;
+}
+
+.imgcon1{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    padding-top:50px;
+    width: 630px;
+    margin-left: 70px;
+}
+.imgcon1 img{
+    display: block;
+    width: 160px;
+}
+
+.imgcon1 .inner{
+    width: 160px;
+    height: 320px;
+    background-color: rgba(0,0,0,0.2);
+    padding:10px 10px 10px 15px;
+}
+.imgcon1 div h5{
+    margin-top: 14px;
+    font-size:14px;
+    font-family: 'Pretendard-Regular';
+    font-weight: 300;
+    padding:0;
+    margin-bottom: 5px;
+
+}
+.imgcon1 h5:hover{
+    color: #9f924b;
+    transition: all 1s;
+}
+.imgcon1 div p{
+    font-size: 12px;
+    font-family: 'Pretendard-Regular';
+    font-weight:100;
+    color: #aaa;
+}
+
+.imgcon1 button.slick-prev{
+    display: none !important;
+}
+.imgcon1 button.slick-next{
+    font-size: 0;
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: 0;
+    background-image: url(../img/arrow.png);
+    background-size: 100px auto;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    margin-top: 50px;
+    margin-left: 460px;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    transition: all 1s;
+    transform: translate(0);
+}
+
+.imgcon1 button.slick-next:hover{
+    animation-name: arrow;
+    opacity: 1;
+}
+
+@keyframes arrow{
+    0%{transform: translateX(0);}
+    100%{transform: translateX(20px);}
+}
+/* 교통정보 */
+h4{
+    font-size: 24px;
+    
+    padding-top:5px;
+    padding-bottom:10px;
+}
+.con p{
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+.imgcon2{
+    display: flex;
+    width: 700px;
+    height: 200px;
+    margin-left: 30px;
+}
+.div1{
+    display: flex;
+    color: #fff;
+    font-weight: bold;
+    width: 700px;
+    font-size:14px;
+    font-family: 'Pretendard-Regular';
+}
+.div1 a{
+    background-color: #333539;
+    padding:10px;
+    padding-left: 28px;
+    margin: 7px;
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.3);
+    position: relative;
+    transition: all 1s;
+}
+.div1 a:hover::before{
+    left: 10px;
+}
+.div1 a:hover{
+    background-color: #4a4a4a;
+    transform: translate(-1px,-1px);
+    /* transform 속성:요소의 표시 위치를 이동시키는 translate */
+    box-shadow: -7px 7px 14px rgba(0,0,0,0.1);
+}
+.div1 a:before{
+    transform: all 1s;
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    transform: rotate(45deg);
+    /* 아이콘 회전 */
+}
+/* 경주방문안내 */
+.Stitle{
+    color:#fff;
+    font-weight:'Pretendard-Regular';
+    width:calc(100% - 100px);
+    background-color: rgba(0,0,0,0.6);
+    z-index: 999;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+.stitle h4{
+    font-size: 25px;
+    font-weight: bold;
+}
+.stitle p{
+    padding-left: 0;
+    margin-top: 10px;
+    color: #ddd;
+}
+.map{
+   margin-bottom: 17px;
+   text-align: center;
+}
+
+.map img{
+    width: 400px;
+}
+.div2{
+    display: flex;
+    color: #fff;
+    font-weight: bold;
+    font-size:14px;
+}
+.div2 a{
+    background-color: #333539;
+    padding:10px;
+    padding-left: 28px;
+    margin: 7px;
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.3);
+    /* **div의 a에게 backgroundColor */
+    position:relative;
+    transition: all 1s;
+}
+
+.div2 a:hover:before{
+    left: 10px;
+}
+
+.div2 a:hover{
+    background-color: #4a4a4a;
+    transform: translate(-1px,-1px);
+    box-shadow: -7px 7px 14px rgba(0,0,0,0.1);
+
+}
+
+.div2 a:before{
+    transition: all 1s;
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    transform: rotate(45deg);
+}
+.Stitle p{
+    font-size: 16px;
+}
+.con p{
+
+    background-size:contain;
+}
+/* 요금티켓안내4 */
+.stitle{
+    margin-top: 30px;
+    margin-left:25px;
+    width:700px;
+    
+}
+.stitle h4{
+    font-size:25px;
+}
+.div3{
+    display: flex;
+    color: #fff;
+    font-weight: bold;
+    font-size:14px;
+}
+.div3 a{
+    background-color: #333539;
+    padding:10px;
+    padding-left: 28px;
+    margin: 7px;
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.3);
+    position: relative;
+    transition: all 1s;
+}
+
+.div3 a:hover{
+    background-color:#4a4a4a;
+    transform: translate(-1px, 1px);
+    /* transform: translate([숫자1]px, [숫자2]px)
+    오브젝트의 위치를 변경한다. 1은 x축 2는 y축으로 이동 */
+    box-shadow: -7px 7px 14ps rgba(0,0,0,0.1);
+}
+.div3 a::before{
+    transition: all 1s;
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: 6px;
+    /* top, left 위치이동 */
+    width: 8px;
+    height: 8px;
+    /* 넓이와 높이 border을 넣는다고 생기진 않는다. */
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #dded;
+    transform: rotate(45deg);
+}
+.div3 a:hover:before{
+    left: 10px;
+}
+.div4{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 20px;
+    flex-wrap: wrap;
+    width: 450px;;
+
+}
+.div4 a{
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size:20px;
+    color: #ddd;
+    margin-right: 5px;
+    margin-left: 4px;
+    font-size: 14px;
+    font-weight: normal;
+    padding:3px 7px;
+}
+
+.div4 a.on{
+    background-color: #ddd;
+    border:1px solid #666;
+    color:#666;
+}
+
+.div4 a:before{
+    content: '#';
+    margin-right: 3px;
+}
+
+input{
+    box-sizing: border-box;
+    width: 400px;
+    line-height: 40px;
+    padding-left: 20px;
+    margin-top: 10px;
+    background-color: transparent;
+    border:0;
+    border-bottom: 1px solid #868686;
+    color: #ccc;
+}
+input::placeholder{
+    color: #868686;
+}
+form{
+    margin-left: 20px;
+
+    position: relative;
+    width: 400px;
+}
+
+form button{
+    position: absolute;
+    bottom:0;
+    background-color: transparent;
+    border: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+}
+button img{
+    width: 24px;
+}
+
+/* mainBn4시작 달력!!!!!!!!!!!!*/
+.mainBn4 .con1{
+    display: flex;
+    justify-content: center;
+    margin-left: 15xp;
+    /* 
+    align-items 기본값은 stretch!!!
+    부모의 높이값에 맞춰서
+    모든 요소들의 높이값이 다 늘어나는 것 
+    */
+    align-items: center; 
+}
+.row1 img{
+    width: 445px;
+    height: 722px;
+    margin-right: 50px;
+    display: block;
+}
+
+.row2{
+    width:587px;
+}
+.ulwrap{
+
+}
+
+.tabMenu{
+    border: 1px solid #aaa;
+    margin-bottom: 20px;
+}
+
+.Tab-Con{
+    padding:5px 20px 20px;
+}
+
+.Tab-box>div p{
+    display: block;
+}
+.Tab-box>div p:before{
+    content: '·';
+    margin-right: 10px;
+}
+
+.ul{
+    display: flex;
+
+    font-family: 'Pretendard-Regular';
+    font-weight: 200;
+    margin-bottom:10px;
+    font-size: 24px;
+}
+.ul li{
+    width: 33.33%;
+    text-align: center;
+    border-right:1px solid #eee;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #454545;
+}
+
+.ul li:last-child{
+    border-right:0;
+}
+.ul li:active{
+    color:#fff;
+    background-color: #454444;
+}
+
+.ul li a{
+    padding-left: 36px;
+    background-image: url(../img/item2.png);
+    background-size: auto 30px;
+    background-repeat: no-repeat;
+    background-position: 0px center;
+}
+
+.ul li:nth-child(2) a{
+    background-image: url(../img/item3.png);
+}
+
+.ul li:nth-child(3) a{
+    background-image: url(../img/item4.png);
+}
+
+
+.ul li.active{
+    background-color: #454444;
+    color: #eee;
+    border-bottom: 4px solid #c25353;
+}
+.ul li.active a:nth-child(1){
+    background-image: url(../img/item5.png);
+}
+.ul li.active a:nth-child(2){
+    background-image: url(../img/item6.png);
+}
+.ul li.active a:nth-child(3){
+    background-image: url(../img/item6.png);
+}
+
+.ul li:hover{
+    background-color: #eee;
+}
+
+.Tab-Con{
+    height: 225px;
+}
+.Tab-box{
+    display: none;
+
+}
+.Tab-box:nth-child(1){
+    display: block;
+    /* display 블락을 해야한다. */
+}
+.ul1{
+    padding-top:7px;
+    padding-left:10px;
+    overflow: hidden;
+    /* 내용이 넘치면 자른다. */
+    text-overflow: ellipsis;
+    list-style: circle; 
+    margin-top: 20px;
+}
+.ul1 li{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    border-bottom: 1px dotted #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.ul1 li a{
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ul1 li:hover a{
+    color:#666
+}
+.ul1 li span{
+    color: #666;
+}
+
+.ul1 li a:before{
+    content: '•';
+    margin-right: 10px;
+}
+.Tab-box div{ 
+    padding-top:13px;
+    overflow: hidden;
+    /* 내용이 넘치면 자른다. */
+    text-overflow: ellipsis;
+    list-style: circle;
+}
+.Tab-box p{
+    font-size:18px;
+    color: #2D2D2D;
+    margin-bottom:7px;
+    margin-left: 5px;
+    font-family:'Pretendard-Regular';
+    font-weight: 200;
+}
+.ul1{
+    padding: 0 0 10px 10px;
+    font-family:'Pretendard-Regular';
+}
+.ul1 li{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    list-style: circle;
+}
+
+/* mainBn5 시작 */
+.mainBn5{
+    margin-top:50px;
+}
+.mainCo{ 
+    width: 1100px;
+    height: 1032px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.mainCo .plus{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    position: absolute;
+    top: 58px;
+    right: 0;
+}
+.mainCo .plus span{
+    display: block;
+    background-color: #ccc;
+    position: absolute;
+}
+
+.mainCo .plus span:first-child{
+    width: 22px;
+    height: 2px;
+    left:9px;
+    top: 19px;
+}
+
+.mainCo .plus span:last-child{
+    width: 2px;
+    height: 22px;
+    left:19px;
+    top: 9px;
+}
+
+.mainCo .plus:hover{
+    background-color: #666;
+}
+
+h6{
+    color: #2D2D2D;
+    font-size:25px;
+    font-family: 'Pretendard-Regular';
+    margin-bottom: 33px;
+}
+.ul2{
+    display: flex;
+    
+    font-family: 'Pretendard-Regular';
+    font-weight: 200;
+    font-size: 24px;
+    color: #454444;
+
+    border-bottom: 1px solid #454444;
+    margin-bottom: 30px;
+}
+.ul2 li{
+    width: 250px;
+    text-align: center;
+    padding:10px 0;
+}
+
+
+
+.ul2 li.active{
+    color: #fff;
+    background-color: #454444;
+}
+
+.ul2 li:hover{
+    color: #c25353;
+}
+.con2{
+    display: none;
+    justify-content: space-between;
+}
+
+/* nth-child() 몇번째 자식
+.con2wrap .con2의 첫번째 자식, 두번째 자식 */
+.con2Wrap .con2:nth-child(1)
+{
+    display: flex;
+
+}
+
+.con2>div{
+    border:1px solid #ddd;
+    padding:10px;
+}
+
+.con2>div img{
+    width: 330px;
+    height: 500px;
+}
+
+.ul3{
+    font-family: 'Pretendard-Regular';
+    font-weight: 200;
+    display: flex;
+    margin-top: 21px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.ulR{
+    font-family: 'Pretendard-Regular';
+    font-weight: 300;
+    color: #c25353;
+    border: 2px solid #c25353;
+    font-weight: bold;
+    padding: 2px 7px;
+}
+.ulB{
+    font-family: 'Pretendard-Regular';
+    font-weight: 300;
+    color: #657bba;
+    border: 2px solid #657bba;
+    font-weight: bold;
+    padding: 2px 7px;
+}
+/* .ul3:nth-child(3){ */
+.ulR:nth-child(2){
+    margin-left:8px;
+}
+.ulb{
+    font-family: 'Pretendard-Regular';
+    font-weight: 300;
+    color: #454444;
+    border: 2px solid #454444;
+    font-weight: bold;
+    padding: 2px 7px;
+    margin-left: 8px;
+}
+.item1-1{
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.item1-1 h7{
+    font-family: 'Pretendard-Regular';
+    font-weight: bold;
+    font-size: 16px;
+
+}
+.item1-1 p{
+    font-family: 'Pretendard-Regular';
+    font-weight: 100;
+    font-size: 14px; 
+    color: #444;
+    margin-bottom: 5px;
+}
+.itemr{
+    color: #c25353;
+}
+
+
+footer{
+
+}
+.footer1{
+    /* width:1200px; */
+    height:170px;
+
+    color: #e3e3e3;
+    background-color: #404041;
+    border-bottom: 2px solid #29292a;
+}
+.UF{
+    padding-top:90px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+.Uf-G{
+    color: #9f924b;
+    font-size: 17px;
+}
+.UF li::after{
+    content: '|';
+ margin-left:20px;
+ margin-right:20px;
+}
+.UF li:last-child::after{
+    content: none;
+}
+.UF li:first-child::after{
+    color: #e3e3e3;
+}
+.footer2{
+    height:230px;
+    color: #e3e3e3;
+    background-color: #404041;
+}
+h8{
+    margin-top: 10px;
+    margin-left:110px;
+}
+.footer2 p{
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
